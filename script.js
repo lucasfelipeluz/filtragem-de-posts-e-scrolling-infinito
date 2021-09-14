@@ -57,12 +57,12 @@ window.addEventListener('scroll', () => {
 });
 
 inputFiltro.addEventListener('input', ({target}) => {
-  const ValorInput = target.value;
+  const ValorInput = target.value.toLowerCase();
   const posts = document.querySelectorAll('.post');
 
   posts.forEach((post) => {
-    const tituloPost = post.querySelector('.post-titulo').textContent;
-    const corpoPost = post.querySelector('.post-corpo').textContent;
+    const tituloPost = post.querySelector('.post-titulo').textContent.toLowerCase();
+    const corpoPost = post.querySelector('.post-corpo').textContent.toLowerCase();
 
     if (tituloPost.includes(ValorInput) || corpoPost.includes(ValorInput)) {
       post.style.display = 'flex';
