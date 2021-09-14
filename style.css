@@ -65,7 +65,7 @@ main{
 }
 .post{
   background-color: #101518;
-  margin: 0 20px;
+  margin: 0 10px;
   padding: 10px 20px;
   position: relative;
   border-radius: 10px;
@@ -125,5 +125,19 @@ main{
 
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@media (min-width:900px) {
+  .container-posts{
+    margin: 50px 50px 0 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+@media (min-width:1200px) {
+  .container-posts{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
   }
 }
